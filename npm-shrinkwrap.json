@@ -1,0 +1,70 @@
+{
+    "name": "webrts-yjs-demo",
+    "version": "0.0.1",
+    "lockfileVersion": 1,
+    "requires": true,
+    "dependencies": {
+        "rtc-quickconnect": {
+            "version": "7.5.0",
+            "resolved": "https://registry.npmjs.org/rtc-quickconnect/-/rtc-quickconnect-7.5.0.tgz",
+            "integrity": "sha512-DkhsfzA1VMIwtwrzpj6OrhsBeA+ytahyH6EeTM6CxRiNDtbk702ylGzukj12ct/4ni12QcOamBbK41N6/8KPwA==",
+            "requires": {
+                "cog": "^1.1.0",
+                "compare-versions": "^3.4.0",
+                "mbus": "^2.0.0",
+                "rtc-attach": "^2.1.0",
+                "rtc-capture": "^1.0.2",
+                "rtc-core": "^4.0.0",
+                "rtc-pluggable-signaller": "^2.1.0",
+                "rtc-tools": "^5.5.0",
+                "utf-8-validate": "5.0.1"
+            },
+            "dependencies": {
+                "rtc-pluggable-signaller": {
+                    "version": "2.1.0",
+                    "resolved": "https://registry.npmjs.org/rtc-pluggable-signaller/-/rtc-pluggable-signaller-2.1.0.tgz",
+                    "integrity": "sha1-Tmyb5GcLK7Rjphpl3Eo0EiFcIvc=",
+                    "requires": {
+                        "rtc-signaller": "^6.3.0",
+                        "rtc-switchboard-messenger": "^2.0.4"
+                    },
+                    "dependencies": {
+                        "rtc-switchboard-messenger": {
+                            "version": "2.0.4",
+                            "resolved": "https://registry.npmjs.org/rtc-switchboard-messenger/-/rtc-switchboard-messenger-2.0.4.tgz",
+                            "integrity": "sha512-4mNoCQshVMQG7sgEsYp10pWbDrssKcpR8pevb4IEDmA0563pp00nz/64NaIo735xZyfr7amJWJ91bHqx+RULPg==",
+                            "requires": {
+                                "browserify-optional": "^1.0.0",
+                                "cog": "^1.0.0",
+                                "messenger-ws": "^3.0.1"
+                            },
+                            "dependencies": {
+                                "messenger-ws": {
+                                    "version": "3.0.1",
+                                    "resolved": "https://registry.npmjs.org/messenger-ws/-/messenger-ws-3.0.1.tgz",
+                                    "integrity": "sha1-kcooVFUwMaQqdkClU/lS1BhTzK4=",
+                                    "requires": {
+                                        "cog": "^1.0.0",
+                                        "pull-ws": "^2.0.0",
+                                        "ws": "^7.1.2",
+                                        "wsurl": "^1.0.0"
+                                    },
+                                    "dependencies": {
+                                        "ws": {
+                                            "version": "7.1.2",
+                                            "resolved": "https://registry.npmjs.org/ws/-/ws-7.1.2.tgz",
+                                            "integrity": "sha512-gftXq3XI81cJCgkUiAVixA0raD9IVmXqsylCrjRygw4+UOOGzPoxnQ6r/CnVL9i+mDncJo94tSkyrtuuQVBmrg==",
+                                            "requires": {
+                                                "async-limiter": "^1.0.0"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
