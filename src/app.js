@@ -1,39 +1,21 @@
-const IPFS = require('ipfs')
 const Y = require('yjs')
 require('y-memory')(Y)
 require('y-array')(Y)
 require('y-text')(Y)
-require('y-ipfs-connector')(Y)
+require('./y-webrtc')(Y)
 
-function repo () {
-  return 'ipfs/yjs-demo/' + Math.random()
-}
-
-const ipfs = new IPFS({
-  repo: repo(),
-  EXPERIMENTAL: {
-    pubsub: true
-  }
-})
-
-ipfs.once('ready', () => ipfs.id((err, info) => {
-  if (err) { throw err }
-
-  console.log('IPFS node ready with address ' + info.id)
-
-  Y({
+Y({
     db: {
       name: 'memory'
     },
     connector: {
-      name: 'ipfs',
-      room: 'ipfs-yjs-demo',
-      ipfs: ipfs
+      name: 'webrtc',
+      room: 'webrtc-yjs-demo',
+      url: 'https://3000-d18d64cb-71f6-4a13-a6b5-5459ff97afd7.ws-eu0.gitpod.io/'
     },
     share: {
       textfield: 'Text'
     }
   }).then((y) => {
     y.share.textfield.bind(document.getElementById('textfield'))
-  })
-}))
+})
